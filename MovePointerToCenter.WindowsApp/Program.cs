@@ -1,5 +1,5 @@
-﻿var screen = Screen.PrimaryScreen!.Bounds;
+using MovePointerToCenter.WindowsApp;
 
-Cursor.Position = new(
-	x: screen.X + (screen.Width / 2),
-	y: screen.Y + (screen.Height / 2));
+WindowsApi.SetCursorPosition(
+	x: WindowsApi.GetPrimaryScreenWidth() / 2,
+	y: WindowsApi.GetPrimaryScreenHeight() / 2);
